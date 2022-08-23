@@ -8,7 +8,8 @@ function getAmount(elementId) {
 
 function setAmount(totalAmount, elementId) {
     const expensesField = document.getElementById(elementId);
-    expensesField.innerText = totalAmount;
+    let totalAmountFiexdTwoDigit = totalAmount.toFixed(2);
+    expensesField.innerText = totalAmountFiexdTwoDigit;
 }
 
 document.getElementById('btn-calculate').addEventListener('click', function () {
@@ -50,7 +51,6 @@ document.getElementById('btn-calculate-totale').addEventListener('click', functi
         alert('Please all filup amount');
         return setAmount(managerCost + coashCost, 'totale-cost-psg')
     }
-
     const totalCostPsg = totalPlayerExpenses + managerCost + coashCost;
     setAmount(totalCostPsg, 'totale-cost-psg')
 })
