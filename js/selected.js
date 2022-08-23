@@ -13,6 +13,9 @@ function setPlayerSelectionList(players) {
 function getButton(element) {
     const playerName = element.parentNode.children[1].innerText
     element.disabled = true;
+    if (element.disabled == true) {
+        element.style.backgroundColor = 'rgba(162, 169, 175, 1)'
+    }
 
     /* const selectedPlayerName = {
         name: playerName
