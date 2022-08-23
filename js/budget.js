@@ -53,7 +53,7 @@ document.getElementById('btn-calculate-totale').addEventListener('click', functi
     }
 
     if (isNaN(coachCost)) {
-        coashCost = 0;
+        coachCost = 0;
         alert('Please all filup amount');
         return setAmount(managerCost + coachCost, 'totale-cost-psg')
     }
