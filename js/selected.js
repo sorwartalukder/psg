@@ -4,21 +4,26 @@ function setPlayerSelectionList(players) {
     const playerlistField = document.getElementById('seleted-players')
     playerlistField.innerHTML = ''
     for (player of players) {
-        // console.log(players)
         const ol = document.createElement('ol');
         ol.innerHTML = `<li>${player}`;
         playerlistField.appendChild(ol)
     }
+
 }
 function getButton(element) {
     const playerName = element.parentNode.children[1].innerText
     element.disabled = true;
+
     /* const selectedPlayerName = {
         name: playerName
     } */
     selectedPlayers.push(playerName)
     document.getElementById('number-of-selected-player').innerText = selectedPlayers.length;
     setPlayerSelectionList(selectedPlayers)
+
+    if (selectedPlayers.length == 6) {
+        alert('more than five player not select please')
+    }
 }
 
 
