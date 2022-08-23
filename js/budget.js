@@ -1,6 +1,3 @@
-
-
-
 function getAmount(elementId) {
     const elmentField = document.getElementById(elementId);
     const amountString = elmentField.value;
@@ -19,8 +16,6 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
     const totalSelectedPlayersField = document.getElementById('number-of-selected-player')
     const totalSelectedPlayersString = totalSelectedPlayersField.innerText;
     const totalSelectedPlayers = parseInt(totalSelectedPlayersString)
-
-
 
     const perPlayerAmount = getAmount('per-player-amount')
     let totalPlayerExpenses = perPlayerAmount * totalSelectedPlayers;
@@ -47,7 +42,6 @@ document.getElementById('btn-calculate-totale').addEventListener('click', functi
         if (isNaN(coashCost)) {
             coashCost = 0;
         }
-
         return setAmount(managerCost + coashCost, 'totale-cost-psg')
     }
 
