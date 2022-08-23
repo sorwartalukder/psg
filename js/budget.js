@@ -1,3 +1,6 @@
+
+
+
 function getAmount(elementId) {
     const elmentField = document.getElementById(elementId);
     const amountString = elmentField.value;
@@ -12,8 +15,15 @@ function setAmount(totalAmount, elementId) {
 }
 
 document.getElementById('btn-calculate').addEventListener('click', function () {
+
+    const totalSelectedPlayersField = document.getElementById('number-of-selected-player')
+    const totalSelectedPlayersString = totalSelectedPlayersField.innerText;
+    const totalSelectedPlayers = parseInt(totalSelectedPlayersString)
+
+
+
     const perPlayerAmount = getAmount('per-player-amount')
-    let totalPlayerExpenses = perPlayerAmount * 5;
+    let totalPlayerExpenses = perPlayerAmount * totalSelectedPlayers;
 
     if (isNaN(totalPlayerExpenses)) {
         totalPlayerExpenses = 0;

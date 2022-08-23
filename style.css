@@ -9,3 +9,7 @@ body {
     background-repeat: no-repeat;
     height: 80vh;
 }
+
+button:disabled {
+    background-color: red;
+}
